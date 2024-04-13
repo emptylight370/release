@@ -17,6 +17,7 @@ This repository will stash the future release!
 - [ffmpegHTMLGUI](https://github.com/lingfengyu-dreaming/ffmpegHTMLGUI), help you generate ffmpeg command in a webpage.
 - textFilter, can remove specific characters from your file or texts.
 - JPGrename, rename file to 00x.jpg.
+- adbpy, a launcher that can launch android emulator and connect adb to it.
 
 # 现在包括
 
@@ -25,3 +26,4 @@ This repository will stash the future release!
 - [ffmpegHTMLGUI](https://github.com/lingfengyu-dreaming/ffmpegHTMLGUI)，在一个网页内帮你生成ffmpeg命令。
 - 文本过滤器，可以从你的文件或文字中移除特定字符。
 - JPGrename，将文件重命名成00x.jpg。
+- adbpy，一键启动安卓模拟器和adb连接。

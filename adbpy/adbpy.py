@@ -85,7 +85,7 @@ def setMenu():
 def launch(emulator, port, wait_time=10):
     os.startfile(emulator)
     time.sleep(int(wait_time))
-    os.system(f"adb connect {port}")
+    os.system(f"adb connect 127.0.0.1:{port}")
 
 # 主函数
 if __name__ == "__main__":

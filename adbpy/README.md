@@ -4,3 +4,9 @@
 使用`pyinstaller`打包成单个文件，放在[release](https://github.com/lingfengyu-dreaming/release/releases/)里面了。
 > 完美兼容PowerToys的命令行调用。  
 > 需要系统可以**直接**调用`adb`。
+
+现在支持的参数有：
+- `mode` 程序运行模式
+- `name` 直接启动的配置文件名
+- `list` 所有配置文件名称
+- `version` 当前应用的版本号

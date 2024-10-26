@@ -1,24 +1,41 @@
 // ==UserScript==
-// @name         SCNU moodle sso redirect
+// @name         SCNU moodle sso redirect(beta)
 // @namespace    https://github.com/lingfengyu-dreaming/release/blob/main/user-script/scnu-sso.user.js
-// @version      1.0.4
+// @version      1.0.5
 // @description  自动跳转到统一登录界面
-// @author       lingfengyu-dreaming
+// @author       Emptylight
 // @match        https://moodle.scnu.edu.cn/login/index.php
 // @match        https://jwxt.scnu.edu.cn/xtgl/login_slogin.html
 // @icon         https://sso.scnu.edu.cn/AccountService/static/fullscreen/images/scnulogo-icon.png
 // @grant        none
 // ==/UserScript==
 
-window.onload = function () {
-    redirect();
-};
+var time = 0;
+
+window.addEventListener("load", function () {
+    try {
+        redirect();
+    } catch {
+        setTimeout(redirect, 300);
+    }
+});
 
 function redirect() {
+    var btn = null;
     if (location.href.includes("moodle")) {
-        var btn = document.querySelector("#ssobtn");
+        btn = document.querySelector("#ssobtn");
+        var href = btn.getAttribute('href');
+        if (href) {
+            location.href = href;
+        } else {
+            throw new Error('no href can redirect!');
+        }
     } else if (location.href.includes("jwxt")) {
-        var btn = document.querySelector("#tysfyzdl");
+        btn = document.querySelector("#tysfyzdl");
+        if (btn) {
+            btn.click();
+        } else {
+            throw new Error('login button not found!');
+        }
     }
-    btn.click();
 }

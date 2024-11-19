@@ -100,7 +100,7 @@ if __name__ == "__main__":
     status = bool(1)
     logged = bool(0)
     name = "user"
-    versioncode = "0.0.8_python"
+    versioncode = "0.0.9_python"
     print("欢迎使用骰娘，在开始前请务必使用.help查看帮助列表")
     print("以及，请在开始使用前使用.help example查看本程序的输入示例，本程序并不与正常骰娘保持完全一致")
     record = open("record.txt", mode="a", encoding="UTF-8")
@@ -650,7 +650,7 @@ if __name__ == "__main__":
                             print("当前程序版本为%s，点击任意键继续" % (versioncode))
                             os.system("pause")
                             webbrowser.open(
-                                "https://github.com/emptylight370/emptylight370/tree/main/COC"
+                                "https://github.com/emptylight370/release/tree/main/COC"
                             )
                         else:
                             continue

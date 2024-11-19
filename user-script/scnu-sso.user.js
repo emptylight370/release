@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         SCNU moodle sso redirect(beta)
+// @name         SCNU moodle sso redirect
 // @namespace    https://github.com/emptylight370/release/blob/main/user-script/scnu-sso.user.js
-// @version      1.0.5
+// @version      1.0.6
 // @description  自动跳转到统一登录界面
 // @author       Emptylight
 // @match        https://moodle.scnu.edu.cn/login/index.php

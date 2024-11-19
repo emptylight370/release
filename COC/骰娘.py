@@ -650,7 +650,7 @@ if __name__ == "__main__":
                             print("当前程序版本为%s，点击任意键继续" % (versioncode))
                             os.system("pause")
                             webbrowser.open(
-                                "https://github.com/lingfengyu-dreaming/lingfengyu-dreaming/tree/main/COC"
+                                "https://github.com/emptylight370/emptylight370/tree/main/COC"
                             )
                         else:
                             continue

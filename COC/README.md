@@ -4,7 +4,7 @@
 注意：所有数据都要是使用本程序产生的文件才能管理，不要拿着你跑团的卡过来玩，不可能兼容的！  
 注意：因为任何不当操作产生的后果均由操作者负责，（虽然不会有什么后果就是了），请正常使用本程序。
 # 下载地址
-点击跳转[最新在线下载地址](https://github.com/lingfengyu-dreaming/lingfengyu-dreaming/releases/tag/touniang0.0.8)  
+点击跳转[最新在线下载地址](https://github.com/emptylight370/emptylight370/releases/tag/touniang0.0.8)  
 也可在[QQ频道【风铃的雨亭】](https://pd.qq.com/s/3a0mynd43)获取最新文件并反馈问题。
 # 更新预告
 因为python大作业的磋磨，我学会了搭建websocket服务器，所以在考虑要不要搞一个可以跑websocket服务的版本了...

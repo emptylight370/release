@@ -14,3 +14,7 @@
 ## itzmx
 
 支持自动填写itzmx论坛的签到框
+
+## Bangumi Enhanced
+
+支持为Bangumi添加一些实用功能，比如复制标题按钮。

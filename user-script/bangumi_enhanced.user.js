@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         Bangumi Enhanced
 // @namespace    https://github.com/emptylight370/release/blob/main/user-script/bangumi_enhanced.user.js
-// @version      1.0.0
+// @version      1.0.1
 // @description  Add some actions to bangumi.
 // @author       Emptylight
 // @match        https://bgm.tv/*
+// @match        https://bangumi.tv/*
 // @icon         http://bgm.tv/favicon.ico
 // @grant        none
 // ==/UserScript==

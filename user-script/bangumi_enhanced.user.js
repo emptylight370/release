@@ -1,87 +1,94 @@
 // ==UserScript==
 // @name         Bangumi Enhanced
 // @namespace    https://github.com/emptylight370/release/blob/main/user-script/bangumi_enhanced.user.js
-// @version      1.0.1
+// @version      1.1.0
 // @description  Add some actions to bangumi.
 // @author       Emptylight
 // @match        https://bgm.tv/*
 // @match        https://bangumi.tv/*
 // @icon         http://bgm.tv/favicon.ico
-// @grant        none
+// @grant        GM_addStyle
+// @grant        GM_notification
 // ==/UserScript==
 
 (function () {
-    'use strict';
+  'use strict';
 
-    if (location.href.match(/subject\/\d+\/ep/gi)) {
-        // 查看动漫章节
-        var eps = document.querySelector("div.line_detail");
-        var titles = eps.querySelectorAll("h6");
-        var copyBtn = document.createElement("a");
-        copyBtn.className = "copy";
-        copyBtn.innerHTML = "📋";
-        copyBtn.title = "复制标题文本";
-        titles.forEach(title => {
-            var aElement = title.querySelector("a");
-            var spanElement = title.querySelector("span.tip");
-            var copy_a = copyBtn.cloneNode(true);
-            copy_a.addEventListener("click", () => {
-                navigator.clipboard.writeText(aElement.textContent).then(() => {
-                    showHints("复制标题成功");
-                }).catch(err => {
-                    showHints("复制标题失败", undefined, "error");
-                    console.error(err);
-                });
-            });
-            title.insertBefore(copy_a, spanElement);
-            var copy_b = copyBtn.cloneNode(true);
-            copy_b.addEventListener("click", () => {
-                navigator.clipboard.writeText(spanElement.textContent).then(() => {
-                    showHints("复制标题成功");
-                }).catch(err => {
-                    showHints("复制标题失败", undefined, "error");
-                    console.error(err);
-                });
-            });
-            title.appendChild(copy_b);
-        });
-    }
+  if (location.href.match(/subject\/\d+\/ep$/i)) {
+    // 查看动漫章节
+    let eps = document.querySelector("div.line_detail");
+    let titles = eps.querySelectorAll("h6");
+    titles.forEach(title => {
+      let aElement = title.querySelector("a");
+      let spanElement = title.querySelector("span.tip");
+      if (aElement && aElement.textContent.length > 0) {
+        let copyBtn = copyTitle(aElement, /(?<=\d\.)(.+)/);
+        title.insertBefore(copyBtn, spanElement);
+      }
+      if (spanElement && spanElement.textContent.length > 0) {
+        let copyBtn = copyTitle(spanElement, /(?<=\/\s+)(.+)/);
+        title.appendChild(copyBtn);
+      }
+    });
+  }
 })();
 
 /**
- * 显示一个提示，不想用alert
- * @param {String} text 显示的文本
- * @param {Number} time 显示的时长
- * @param {"info"|"warning"|"success"|"error"} type 显示的类型
+ * 向文档中插入脚本的style标签
  */
-function showHints(text, time = 5000, type = "info") {
-    var hint = document.createElement("div");
-    hint.style.width = "fit-content";
-    hint.style.maxWidth = "150px";
-    hint.style.height = "fit-content";
-    hint.style.border = "1px solid black";
-    hint.style.borderRadius = "15px";
-    hint.textContent = text;
-    hint.style.position = "fixed";
-    hint.style.right = "20px";
-    hint.style.top = "15px";
-    hint.style.backgroundColor = "white";
-    switch (type) {
-        case "info":
-            hint.style.color = "black";
-            break;
-        case "warning":
-            hint.style.color = "#bfbf00";
-            break;
-        case "success":
-            hint.style.color = "#009f00";
-            break;
-        case "error":
-            hint.style.color = "#6f0000";
-            break;
+function insertStyles() {
+  var style = `
+    .hints {
+      width: fit-content;
+      max-width: 150px;
+      height: fit-content;
+      border: 1px solid black;
+      border-radius: 15px;
+      position: fixed;
+      right: 20px;
+      top: 15px;
+      background-color: white;
+      padding: 5px 5px;
     }
-    document.body.appendChild(hint);
-    setTimeout(() => {
-        document.body.removeChild(hint);
-    }, time);
+
+    .hints.info {
+      color: black;
+    }
+
+    .hints.warning {
+      color: #bfbf00;
+    }
+
+    .hints.success {
+      color: #009f00;
+    }
+
+    .hints.error {
+      color: #6f0000;
+    }
+  `;
+  GM_addStyle(style);
+}
+
+/**
+ * 传入元素生成一个复制按钮用于复制元素文本
+ * @param {HTMLAnchorElement | HTMLSpanElement} element 要复制的元素
+ * @param {RegExpMatchArray | null} regex 填入 {@link String.prototype.match} 进行匹配的正则表达式
+ * @returns 复制传入元素的textContent的按钮
+ */
+function copyTitle(element, regex) {
+  // 创建复制按钮
+  var copyBtn = document.createElement("a");
+  copyBtn.className = "copy";
+  copyBtn.innerHTML = "📋";
+  copyBtn.title = "复制标题文本";
+  copyBtn.addEventListener("click", () => {
+    navigator.clipboard.writeText(element.textContent.match(regex)[1]).then(() => {
+      GM_notification("复制标题成功");
+    }).catch(err => {
+      GM_notification("复制标题失败，使用开发者工具查看报错", undefined, "error");
+      console.error(err);
+    });
+  });
+  return copyBtn;
 }

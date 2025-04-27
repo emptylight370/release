@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Bangumi Enhanced
 // @namespace    https://github.com/emptylight370/release/blob/main/user-script/bangumi_enhanced.user.js
-// @version      1.1.0
+// @version      1.1.1
 // @description  Add some actions to bangumi.
 // @author       Emptylight
 // @match        https://bgm.tv/*
@@ -82,6 +82,7 @@ function copyTitle(element, regex) {
   copyBtn.className = "copy";
   copyBtn.innerHTML = "📋";
   copyBtn.title = "复制标题文本";
+  copyBtn.style.cursor = "pointer";
   copyBtn.addEventListener("click", () => {
     navigator.clipboard.writeText(element.textContent.match(regex)[1]).then(() => {
       GM_notification("复制标题成功");

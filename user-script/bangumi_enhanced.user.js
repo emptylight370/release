@@ -1,24 +1,29 @@
 // ==UserScript==
 // @name         Bangumi Enhanced
 // @namespace    https://github.com/emptylight370/release/blob/main/user-script/bangumi_enhanced.user.js
-// @version      1.1.1
+// @version      1.2.0
 // @description  Add some actions to bangumi.
 // @author       Emptylight
 // @match        https://bgm.tv/*
 // @match        https://bangumi.tv/*
 // @icon         http://bgm.tv/favicon.ico
-// @grant        GM_addStyle
 // @grant        GM_notification
+// @grant        GM_setClipboard
+// @grant        GM_registerMenuCommand
+// @grant        GM_unregisterMenuCommand
+// @grant        GM_setValue
+// @grant        GM_getValue
 // ==/UserScript==
 
+// ANCHOR - 初始化函数
 (function () {
-  'use strict';
+  "use strict";
 
   if (location.href.match(/subject\/\d+\/ep$/i)) {
     // 查看动漫章节
     let eps = document.querySelector("div.line_detail");
     let titles = eps.querySelectorAll("h6");
-    titles.forEach(title => {
+    titles.forEach((title) => {
       let aElement = title.querySelector("a");
       let spanElement = title.querySelector("span.tip");
       if (aElement && aElement.textContent.length > 0) {
@@ -33,43 +38,7 @@
   }
 })();
 
-/**
- * 向文档中插入脚本的style标签
- */
-function insertStyles() {
-  var style = `
-    .hints {
-      width: fit-content;
-      max-width: 150px;
-      height: fit-content;
-      border: 1px solid black;
-      border-radius: 15px;
-      position: fixed;
-      right: 20px;
-      top: 15px;
-      background-color: white;
-      padding: 5px 5px;
-    }
-
-    .hints.info {
-      color: black;
-    }
-
-    .hints.warning {
-      color: #bfbf00;
-    }
-
-    .hints.success {
-      color: #009f00;
-    }
-
-    .hints.error {
-      color: #6f0000;
-    }
-  `;
-  GM_addStyle(style);
-}
-
+// ANCHOR - 复制标题文本的函数
 /**
  * 传入元素生成一个复制按钮用于复制元素文本
  * @param {HTMLAnchorElement | HTMLSpanElement} element 要复制的元素
@@ -84,12 +53,36 @@ function copyTitle(element, regex) {
   copyBtn.title = "复制标题文本";
   copyBtn.style.cursor = "pointer";
   copyBtn.addEventListener("click", () => {
-    navigator.clipboard.writeText(element.textContent.match(regex)[1]).then(() => {
-      GM_notification("复制标题成功");
-    }).catch(err => {
-      GM_notification("复制标题失败，使用开发者工具查看报错", undefined, "error");
-      console.error(err);
+    GM_setClipboard(element.textContent.match(regex)[1], undefined, () => {
+      if (GM_getValue("notification", true)) {
+        GM_notification("复制标题成功");
+      }
     });
   });
   return copyBtn;
 }
+
+/**
+ * NOTE - 添加油猴设置项
+ */
+// SECTION 添加设置项 - 通知设置
+if (GM_getValue("notification", true)) {
+  var notification_setting_name = "启用脚本通知：启用";
+} else {
+  notification_setting_name = "启用脚本通知：禁用";
+}
+var notification_setting = GM_registerMenuCommand(notification_setting_name, notification_setting_click);
+
+// SECTION 通知设置的点击事件
+function notification_setting_click() {
+  GM_unregisterMenuCommand(notification_setting);
+  GM_setValue("notification", !GM_getValue("notification", true));
+  if (GM_getValue("notification", true)) {
+    var notification_setting_name = "启用脚本通知：启用";
+  } else {
+    notification_setting_name = "启用脚本通知：禁用";
+  }
+  notification_setting = GM_registerMenuCommand(notification_setting_name, notification_setting_click);
+}
+// !SECTION 通知设置的点击事件
+// !SECTION 添加设置项 - 通知设置

@@ -18,3 +18,7 @@
 ## Bangumi Enhanced
 
 支持为Bangumi添加一些实用功能，比如复制标题按钮。
+
+## NexusMods
+
+尝试去掉广告div。

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Better Nexus Mods
 // @namespace    https://github.com/emptylight370/release/blob/main/user-script/nexusmods.user.js
-// @version      1.2.0
+// @version      1.2.1
 // @description  Try to do something on nexusmods website.
 // @author       Emptylight
 // @match        https://www.nexusmods.com/*
@@ -12,7 +12,7 @@
 (function() {
   'use strict';
 
-  for (run = 0; run < 5; run++){
+  for (var run = 0; run < 5; run++){
     var hasAD = removeADs();
     if (hasAD) {
       setTimeout(removeADs,3000);

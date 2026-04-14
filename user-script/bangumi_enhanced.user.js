@@ -60,7 +60,7 @@ function copyTitle(element, regex) {
           title: "复制标题成功",
           text: element.textContent.match(regex)[1],
           tag: "copy-title-success",
-          timeout: 3000
+          timeout: 3000,
         });
       }
     });

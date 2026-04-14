@@ -9,11 +9,11 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
-  'use strict';
+(function () {
+  "use strict";
 
   removeADs();
-  setTimeout(checkProblems,3000);
+  setTimeout(checkProblems, 3000);
 })();
 
 window.addEventListener("popstate", checkProblems());
@@ -22,9 +22,13 @@ function removeADs() {
   let adsContainer = document.querySelector(".ads");
   let flag = false;
   if (!adsContainer) {
-    adsContainer = document.querySelector("[data-testid=\"ad-container-player\"]");
+    adsContainer = document.querySelector(
+      '[data-testid="ad-container-player"]',
+    );
     if (adsContainer) {
-      adsContainer.parentElement.parentElement.removeChild(adsContainer.parentElement);
+      adsContainer.parentElement.parentElement.removeChild(
+        adsContainer.parentElement,
+      );
       flag = true;
     }
   } else {
@@ -32,7 +36,7 @@ function removeADs() {
     flag = true;
   }
   if (flag) {
-    setTimeout(removeADs,3000);
+    setTimeout(removeADs, 3000);
   }
 }
 
@@ -42,6 +46,6 @@ function checkProblems() {
   if (center?.firstChild?.textContent === "Oops!") {
     location.reload();
     console.log("error occurs! reload page!");
-    setTimeout(checkProblems,3000);
+    setTimeout(checkProblems, 3000);
   }
 }

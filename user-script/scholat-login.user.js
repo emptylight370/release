@@ -9,7 +9,7 @@
 // @grant        none
 // ==/UserScript==
 
-window.onload = function() {
-    var href = document.getElementById("loginHref").href;
-    location.href = href;
-}
+window.onload = function () {
+  var href = document.getElementById("loginHref").href;
+  location.href = href;
+};

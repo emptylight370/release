@@ -21,11 +21,15 @@
 
 function click() {
   try {
-    let loginButton = document.querySelector("[data-testid='menu-navigation-footer-login']");
+    let loginButton = document.querySelector(
+      "[data-testid='menu-navigation-footer-login']",
+    );
     if (loginButton.textContent.includes("@")) {
       return;
     } else if (loginButton.textContent == "Sign in") {
-      document.querySelector("[data-testid='menu-navigation-footer-login']").click();
+      document
+        .querySelector("[data-testid='menu-navigation-footer-login']")
+        .click();
     }
   } catch (error) {
     setTimeout(click, 300);
@@ -36,5 +40,7 @@ function click() {
       input.click();
     }
   });
-  document.querySelector(".ant-btn.AceptPrivacyMenu_loginButton_UDhpnVig").click();
+  document
+    .querySelector(".ant-btn.AceptPrivacyMenu_loginButton_UDhpnVig")
+    .click();
 }

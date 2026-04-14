@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         Bangumi Enhanced
 // @namespace    https://github.com/emptylight370/release/blob/main/user-script/bangumi_enhanced.user.js
-// @version      1.2.0
+// @version      1.3.0
 // @description  Add some actions to bangumi.
 // @author       Emptylight
 // @match        https://bgm.tv/*
 // @match        https://bangumi.tv/*
-// @icon         http://bgm.tv/favicon.ico
+// @icon         http://bgm.tv/img/favicon.ico
 // @grant        GM_notification
 // @grant        GM_setClipboard
 // @grant        GM_registerMenuCommand
@@ -55,7 +55,12 @@ function copyTitle(element, regex) {
   copyBtn.addEventListener("click", () => {
     GM_setClipboard(element.textContent.match(regex)[1], undefined, () => {
       if (GM_getValue("notification", true)) {
-        GM_notification("复制标题成功");
+        GM_notification({
+          title: "复制标题成功",
+          text: element.textContent.match(regex)[1],
+          tag: "copy-title-success",
+          timeout: 3000
+        });
       }
     });
   });

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Bangumi Enhanced
 // @namespace    https://github.com/emptylight370/release/blob/main/user-script/bangumi_enhanced.user.js
-// @version      1.3.0
+// @version      1.3.1
 // @description  Add some actions to bangumi.
 // @author       Emptylight
 // @match        https://bgm.tv/*
@@ -21,17 +21,17 @@
 
   if (location.href.match(/subject\/\d+\/ep$/i)) {
     // 查看动漫章节
-    let eps = document.querySelector("div.line_detail");
-    let titles = eps.querySelectorAll("h6");
+    const eps = document.querySelector("div.line_detail");
+    const titles = eps.querySelectorAll("h6");
     titles.forEach((title) => {
-      let aElement = title.querySelector("a");
-      let spanElement = title.querySelector("span.tip");
+      const aElement = title.querySelector("a");
+      const spanElement = title.querySelector("span.tip");
       if (aElement && aElement.textContent.length > 0) {
-        let copyBtn = copyTitle(aElement, /(?<=\d\.)(.+)/);
+        const copyBtn = copyTitle(aElement, /(?<=\d\.)(.+)/);
         title.insertBefore(copyBtn, spanElement);
       }
       if (spanElement && spanElement.textContent.length > 0) {
-        let copyBtn = copyTitle(spanElement, /(?<=\/\s+)(.+)/);
+        const copyBtn = copyTitle(spanElement, /(?<=\/\s+)(.+)/);
         title.appendChild(copyBtn);
       }
     });
@@ -47,7 +47,7 @@
  */
 function copyTitle(element, regex) {
   // 创建复制按钮
-  var copyBtn = document.createElement("a");
+  const copyBtn = document.createElement("a");
   copyBtn.className = "copy";
   copyBtn.innerHTML = "📋";
   copyBtn.title = "复制标题文本";

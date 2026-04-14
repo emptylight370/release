@@ -1,8 +1,9 @@
 // ==UserScript==
 // @name         Bangumi Enhanced
 // @namespace    https://github.com/emptylight370/release/blob/main/user-script/bangumi_enhanced.user.js
-// @version      1.3.1
+// @version      1.3.2
 // @description  Add some actions to bangumi.
+// @description:zh-CN 为bangumi添加一些功能。
 // @author       Emptylight
 // @match        https://bgm.tv/*
 // @match        https://bangumi.tv/*
@@ -76,18 +77,27 @@ if (GM_getValue("notification", true)) {
 } else {
   notification_setting_name = "启用脚本通知：禁用";
 }
-var notification_setting = GM_registerMenuCommand(notification_setting_name, notification_setting_click);
+var notification_setting = GM_registerMenuCommand(
+  notification_setting_name,
+  notification_setting_click,
+);
 
 // SECTION 通知设置的点击事件
 function notification_setting_click() {
-  GM_unregisterMenuCommand(notification_setting);
+  // GM_unregisterMenuCommand(notification_setting);
   GM_setValue("notification", !GM_getValue("notification", true));
   if (GM_getValue("notification", true)) {
     var notification_setting_name = "启用脚本通知：启用";
   } else {
     notification_setting_name = "启用脚本通知：禁用";
   }
-  notification_setting = GM_registerMenuCommand(notification_setting_name, notification_setting_click);
+  notification_setting = GM_registerMenuCommand(
+    notification_setting_name,
+    notification_setting_click,
+    {
+      id: notification_setting,
+    },
+  );
 }
 // !SECTION 通知设置的点击事件
 // !SECTION 添加设置项 - 通知设置

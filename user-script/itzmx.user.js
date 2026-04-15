@@ -1,14 +1,15 @@
 // ==UserScript==
-// @name         Itzmx签到脚本
-// @namespace    https://github.com/emptylight370/release/blob/main/user-script/itzmx.user.js
-// @version      1.1.0
-// @description  自动完成itzmx论坛的签到
-// @author       Emptylight
-// @match        https://bbs.itzmx.com/*
-// @icon         http://itzmx.com/favicon.ico
-// @grant        GM_setValue
-// @grant        GM_getValue
-// @run-at       document-end
+// @name        Itzmx签到脚本
+// @namespace   https://github.com/emptylight370/release/blob/main/user-script/itzmx.user.js
+// @version     1.2.0
+// @description 自动完成itzmx论坛的签到
+// @author      Emptylight
+// @match       https://bbs.itzmx.com/*
+// @icon        http://itzmx.com/favicon.ico
+// @grant       GM_setValue
+// @grant       GM_getValue
+// @grant       GM_registerMenuCommand
+// @run-at      document-end
 // @require https://scriptcat.org/lib/513/2.1.0/ElementGetter.js#sha256=aQF7JFfhQ7Hi+weLrBlOsY24Z2ORjaxgZNoni7pAz5U=
 // ==/UserScript==
 
@@ -19,7 +20,7 @@
   const day = new Date().getDate().toString().padStart(2, "0");
   const month = new Date().getMonth().toString().padStart(2, "0");
   const today = month + day;
-  if (lastrun === today) {
+  if (lastrun === today && GM_getValue("hasCheckin", false)) {
     return;
   }
 
@@ -51,6 +52,46 @@
     emo.click();
     const say = await elmGetter.get("#todaysay");
     say.value = "签到qd" + day;
+    if (GM_getValue("clickCheckin", false)) {
+      const checkin = await elmGetter.get("#qiandao > p > button > strong");
+      checkin.click();
+      GM_setValue("hasCheckin", true);
+    } else {
+      GM_setValue("hasCheckin", false);
+    }
     GM_setValue("lastrun", today);
+  } else {
+    GM_setValue("hasCheckin", false);
   }
 })();
+
+if (GM_getValue("clickCheckin", false)) {
+  var isClick = GM_registerMenuCommand("✅点击签到按钮", () => {
+    switchCheckout();
+  });
+} else {
+  isClick = GM_registerMenuCommand("❌点击签到按钮", () => {
+    switchCheckout();
+  });
+}
+
+function switchCheckout() {
+  GM_setValue("clickCheckin", !GM_getValue("clickCheckin", false));
+  if (GM_getValue("clickCheckin", false)) {
+    GM_registerMenuCommand(
+      "✅点击签到按钮",
+      () => {
+        switchCheckout();
+      },
+      { id: isClick },
+    );
+  } else {
+    GM_registerMenuCommand(
+      "❌点击签到按钮",
+      () => {
+        switchCheckout();
+      },
+      { id: isClick },
+    );
+  }
+}

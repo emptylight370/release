@@ -1,0 +1,56 @@
+name: 问题反馈
+description: 反馈一个问题
+title: "[BUG] "
+labels: ["Chinese", "triage"]
+type: Bug
+body:
+  - type: textarea
+    attributes:
+      label: 描述bug
+      description: 详细描述一下遇到了什么情况
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 重现步骤
+      description: 如何重现这个bug：
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 预期行为
+      description: 你预期这个功能怎么工作？
+    validations:
+      required: true
+
+  - type: upload
+    attributes:
+      label: 屏幕截图
+      description: 如有，可在此附上屏幕截图或者录屏
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: 相关信息
+      description: 请完善以下信息
+      value: |
+        - 设备：
+        - 系统：
+        - 应用：
+        - 版本：
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 附加信息
+      description: 如有，请在此补充其他信息
+    validations:
+      required: false

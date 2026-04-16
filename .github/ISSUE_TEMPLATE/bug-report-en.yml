@@ -1,0 +1,56 @@
+name: Bug report
+description: Report a bug
+title: "[BUG] "
+labels: ["English", "triage"]
+type: Bug
+body:
+  - type: textarea
+    attributes:
+      label: Describe the bug
+      description: Please describe the bug you encountered.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Reproduce steps
+      description: "How to reproduce the bug:"
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: upload
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots or recordings to help explain your problem.
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Related information
+      description: Please provide the following information
+      value: |
+        - Device:
+        - System:
+        - Application:
+        - Version:
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Additional information
+      description: If applicable, add any additional information about the problem here.
+    validations:
+      required: false

@@ -10,7 +10,6 @@ body:
       description: Please describe the bug you encountered.
     validations:
       required: true
-
   - type: textarea
     attributes:
       label: Reproduce steps
@@ -21,21 +20,18 @@ body:
         3.
     validations:
       required: true
-
   - type: textarea
     attributes:
       label: Expected behavior
       description: What did you expect to happen?
     validations:
       required: true
-
   - type: upload
     attributes:
       label: Screenshots
       description: If applicable, add screenshots or recordings to help explain your problem.
     validations:
       required: false
-
   - type: textarea
     attributes:
       label: Related information
@@ -47,7 +43,6 @@ body:
         - Version:
     validations:
       required: true
-
   - type: textarea
     attributes:
       label: Additional information

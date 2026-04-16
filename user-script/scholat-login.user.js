@@ -1,9 +1,12 @@
 // ==UserScript==
 // @name         Scholat login
-// @namespace    https://github.com/emptylight370/release/blob/main/user-script/scholat-login.user.js
-// @version      1.0.1
+// @namespace    https://github.com/emptylight370/release/blob/main/user-script
+// @version      1.0.2
 // @description  Auto redirect to login page when open scholat website.
 // @author       Emptylight
+// @homepageURL  https://github.com/emptylight370/release/blob/main/user-script/scholat-login.user.js
+// @source       https://github.com/emptylight370/release/blob/main/user-script/scholat-login.user.js
+// @supportURL   https://github.com/emptylight370/release/issues
 // @match        https://www.scholat.com/
 // @icon         http://scholat.com/favicon.ico
 // @grant        none

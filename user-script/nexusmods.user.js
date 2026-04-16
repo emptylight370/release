@@ -1,12 +1,17 @@
 // ==UserScript==
-// @name         Better Nexus Mods
-// @namespace    https://github.com/emptylight370/release/blob/main/user-script/nexusmods.user.js
-// @version      1.3.0
-// @description  Try to do something on nexusmods website.
-// @author       Emptylight
-// @match        https://www.nexusmods.com/*
-// @icon         http://nexusmods.com/favicon.ico
-// @grant        none
+// @name               Better Nexus Mods
+// @name:zh-CN         更好的Nexus Mods
+// @namespace          https://github.com/emptylight370/release/blob/main/user-script
+// @version            1.3.1
+// @description        Try to do something on nexusmods website.
+// @description:zh-CN  尝试在nexusmods网站上做一些事情。
+// @author             Emptylight
+// @homepageURL        https://github.com/emptylight370/release/blob/main/user-script
+// @source             https://github.com/emptylight370/release/blob/main/user-script/nexusmods.user.js
+// @supportURL         https://github.com/emptylight370/release/issues
+// @match              https://www.nexusmods.com/*
+// @icon               http://nexusmods.com/favicon.ico
+// @grant              none
 // ==/UserScript==
 
 (function () {

@@ -1,18 +1,23 @@
 // ==UserScript==
-// @name              Bangumi Enhanced
-// @namespace         https://github.com/emptylight370/release/blob/main/user-script/bangumi_enhanced.user.js
-// @version           1.3.3
-// @description       Add some actions to bangumi.
-// @description:zh-CN 为bangumi添加一些功能。
-// @author            Emptylight
-// @match             https://bgm.tv/*
-// @match             https://bangumi.tv/*
-// @icon              http://bgm.tv/img/favicon.ico
-// @grant             GM_notification
-// @grant             GM_setClipboard
-// @grant             GM_registerMenuCommand
-// @grant             GM_setValue
-// @grant             GM_getValue
+// @name               Bangumi Enhanced
+// @name:zh-CN         Bangumi增强
+// @namespace          https://github.com/emptylight370/release/blob/main/user-script
+// @version            1.3.4
+// @description        Add some actions to bangumi.
+// @description:zh-CN  为bangumi添加一些功能。
+// @author             Emptylight
+// @homepageURL        https://github.com/emptylight370/release/blob/main/user-script
+// @source             https://github.com/emptylight370/release/blob/main/user-script/bangumi_enhanced.user.js
+// @supportURL         https://github.com/emptylight370/release/issues
+// @match              https://bgm.tv/*
+// @match              https://bangumi.tv/*
+// @icon               http://bgm.tv/img/favicon.ico
+// @grant              GM_notification
+// @grant              GM_setClipboard
+// @grant              GM_registerMenuCommand
+// @grant              GM_setValue
+// @grant              GM_getValue
+// @grant              CAT_userConfig
 // ==/UserScript==
 
 // ANCHOR - 初始化函数

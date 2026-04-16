@@ -1,16 +1,19 @@
 // ==UserScript==
-// @name        Itzmx签到脚本
-// @namespace   https://github.com/emptylight370/release/blob/main/user-script/itzmx.user.js
-// @version     1.2.0
-// @description 自动完成itzmx论坛的签到
-// @author      Emptylight
-// @match       https://bbs.itzmx.com/*
-// @icon        http://itzmx.com/favicon.ico
-// @grant       GM_setValue
-// @grant       GM_getValue
-// @grant       GM_registerMenuCommand
-// @run-at      document-end
-// @require https://scriptcat.org/lib/513/2.1.0/ElementGetter.js#sha256=aQF7JFfhQ7Hi+weLrBlOsY24Z2ORjaxgZNoni7pAz5U=
+// @name         Itzmx签到脚本
+// @namespace    https://github.com/emptylight370/release/blob/main/user-script
+// @version      1.2.1
+// @description  自动完成itzmx论坛的签到
+// @author       Emptylight
+// @homepageURL  https://github.com/emptylight370/release/blob/main/user-script
+// @source       https://github.com/emptylight370/release/blob/main/user-script/itzmx.user.js
+// @supportURL   https://github.com/emptylight370/release/issues
+// @match        https://bbs.itzmx.com/*
+// @icon         http://itzmx.com/favicon.ico
+// @grant        GM_setValue
+// @grant        GM_getValue
+// @grant        GM_registerMenuCommand
+// @run-at       document-end
+// @require      https://scriptcat.org/lib/513/2.1.0/ElementGetter.js#sha256=aQF7JFfhQ7Hi+weLrBlOsY24Z2ORjaxgZNoni7pAz5U=
 // ==/UserScript==
 
 (async function () {

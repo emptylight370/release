@@ -1,17 +1,20 @@
 // ==UserScript==
-// @name              SCNU SSO redirect
-// @name:zh-CN        SCNU统一认证登录跳转
-// @namespace         https://github.com/emptylight370/release/blob/main/user-script/scnu-sso.user.js
-// @version           1.1.0
-// @description       Auto redirect to SSO login page
-// @description:zh-CN 自动跳转到统一登录界面
-// @author            Emptylight
-// @match             https://moodle.scnu.edu.cn/login/index.php
-// @match             https://jwxt.scnu.edu.cn/xtgl/login_slogin.html
-// @match             https://jwxt.scnu.edu.cn/xtgl/index_initMenu.html
-// @icon              https://sso.scnu.edu.cn/AccountService/static/fullscreen/images/scnulogo-icon.png
-// @grant             none
-// @run-at            document-start
+// @name               SCNU SSO redirect
+// @name:zh-CN         SCNU统一认证登录跳转
+// @namespace          https://github.com/emptylight370/release/blob/main/user-script
+// @version            1.1.1
+// @description        Auto redirect to SSO login page
+// @description:zh-CN  自动跳转到统一登录界面
+// @author             Emptylight
+// @homepageURL        https://github.com/emptylight370/release/blob/main/user-script/scnu-sso.user.js
+// @source             https://github.com/emptylight370/release/blob/main/user-script/scnu-sso.user.js
+// @supportURL         https://github.com/emptylight370/release/issues
+// @match              https://moodle.scnu.edu.cn/login/index.php
+// @match              https://jwxt.scnu.edu.cn/xtgl/login_slogin.html
+// @match              https://jwxt.scnu.edu.cn/xtgl/index_initMenu.html
+// @icon               https://sso.scnu.edu.cn/AccountService/static/fullscreen/images/scnulogo-icon.png
+// @grant              none
+// @run-at             document-start
 // ==/UserScript==
 
 var time = 0;

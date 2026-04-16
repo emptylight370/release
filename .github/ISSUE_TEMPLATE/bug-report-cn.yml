@@ -2,7 +2,6 @@ name: 问题反馈
 description: 反馈一个问题
 title: "[BUG] "
 labels: ["Chinese", "triage"]
-type: Bug
 body:
   - type: textarea
     attributes:

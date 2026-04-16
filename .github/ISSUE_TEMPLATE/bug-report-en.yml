@@ -2,7 +2,6 @@ name: Bug report
 description: Report a bug
 title: "[BUG] "
 labels: ["English", "triage"]
-type: Bug
 body:
   - type: textarea
     attributes:

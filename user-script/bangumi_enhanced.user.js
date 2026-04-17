@@ -2,7 +2,7 @@
 // @name               Bangumi Enhanced
 // @name:zh-CN         Bangumi增强
 // @namespace          https://github.com/emptylight370/release/blob/main/user-script
-// @version            1.3.4
+// @version            1.3.5
 // @description        Add some actions to bangumi.
 // @description:zh-CN  为bangumi添加一些功能。
 // @author             Emptylight
@@ -17,7 +17,6 @@
 // @grant              GM_registerMenuCommand
 // @grant              GM_setValue
 // @grant              GM_getValue
-// @grant              CAT_userConfig
 // ==/UserScript==
 
 // ANCHOR - 初始化函数

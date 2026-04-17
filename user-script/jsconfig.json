@@ -1,0 +1,14 @@
+{
+  "noSemanticValidation": true,
+  "noSyntaxValidation": false,
+  "onlyVisible": false,
+  "allowNonTsExtensions": true,
+  "checkJs": true,
+  "noUnusedLocals": false,
+  "noFallthroughCasesInSwitch": false,
+  "noImplicitThis": false,
+  "strict": true,
+  "compilerOptions": {
+    "allowJs": true
+  }
+}

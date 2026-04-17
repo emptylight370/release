@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         Itzmx签到脚本
 // @namespace    https://github.com/emptylight370/release/blob/main/user-script
-// @version      1.2.1
+// @version      1.2.2
 // @description  自动完成itzmx论坛的签到
 // @author       Emptylight
 // @homepageURL  https://github.com/emptylight370/release/blob/main/user-script
 // @source       https://github.com/emptylight370/release/blob/main/user-script/itzmx.user.js
 // @supportURL   https://github.com/emptylight370/release/issues
 // @match        https://bbs.itzmx.com/*
-// @icon         http://itzmx.com/favicon.ico
+// @icon         https://bbs.itzmx.com/favicon.ico
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @grant        GM_registerMenuCommand

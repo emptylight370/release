@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GKD快照审查器跳转
 // @namespace    https://github.com/emptylight370/release/blob/main/user-script
-// @version      1.0.0
+// @version      1.1.0
 // @description  重定向 i.gkd.li 到第三方快照审查器
 // @author       Emptylight
 // @homepageURL  https://github.com/emptylight370/release/blob/main/user-script
@@ -22,7 +22,8 @@
 
   const target = GM_getValue("gkd_target", "https://li.chenge.eu.org");
   const path = location.pathname;
-  location.href = target + path;
+  const search = location.search;
+  location.href = target + path + search;
 })();
 
 GM_registerMenuCommand("设置自定义目标域名", () => {

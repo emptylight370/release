@@ -5,6 +5,8 @@
 
 ## scnu sso
 
+[Open on GitHub](scnu-sso.user.js)
+
 自动跳转到统一认证登录页面。  
 目前支持：
 
@@ -16,12 +18,16 @@
 
 ## scholat
 
+[Open on GitHub](scholat-login.user.js)
+
 目前支持学者网自动从主页进入登录页面
 
 > [!TIP]
 > 最终支持 Tampermonkey 的版本为 1.0.1。
 
 ## itzmx
+
+[Open on GitHub](itzmx.user.js)
 
 支持自动填写itzmx论坛的签到框
 
@@ -30,12 +36,16 @@
 
 ## Bangumi Enhanced
 
+[Open on GitHub](bangumi_enhanced.user.js)
+
 支持为Bangumi添加一些实用功能，比如复制标题按钮。
 
 > [!TIP]
 > 最终支持 Tampermonkey 的版本为 1.2.0。
 
 ## NexusMods
+
+[Open on GitHub](nexusmods.user.js)
 
 尝试去掉广告div。
 
@@ -44,14 +54,21 @@
 
 ## gkd redirect
 
+[Open on GitHub](gkd-redirect.user.js)
+| [Open on ScriptCat](https://scriptcat.org/zh-CN/script-show-page/7787)
+
 自动从官方的快照审查器跳转到第三方的快照审查器。默认从 `i.gkd.li` 跳转到 `li.chenge.eu.org`。  
 如果选择跳转到自定义的第三方网站，则需要在脚本设置中添加作用域，以在目标站点显示脚本设置菜单。
 
 ## Microsoft Learn redirect
 
+[Open on GitHub](ms-learn.user.js)
+
 自动从非中文版本跳转到中文版本（有机翻）。默认跳转到语言 `zh-cn`，打开非中文的语言就会自动跳转。
 可以自定义跳转的目标语言，具体语言代码参考网址，大致符合 ISO `语言代码-国家/地区代码` 格式。
 
 ## 链滴视频自动静音
+
+[Open on GitHub](ld246-mute.user.js)
 
 总有视频带有各种配乐，全都关了。同时添加了流云为作用域。

@@ -2,7 +2,7 @@
 // @name               Bangumi Enhanced
 // @name:zh-CN         Bangumi增强
 // @namespace          https://github.com/emptylight370/release/blob/main/user-script
-// @version            1.3.5
+// @version            1.4.0
 // @description        Add some actions to bangumi.
 // @description:zh-CN  为bangumi添加一些功能。
 // @author             Emptylight
@@ -12,11 +12,11 @@
 // @match              https://bgm.tv/*
 // @match              https://bangumi.tv/*
 // @icon               http://bgm.tv/img/favicon.ico
-// @grant              GM_notification
 // @grant              GM_setClipboard
 // @grant              GM_registerMenuCommand
 // @grant              GM_setValue
 // @grant              GM_getValue
+// @require            https://scriptcat.org/lib/2253/1.0.1/show_message.js?sha384-Q0BbaLOJiTRt8J+rVUJmEyfqypzuAkkSPFfCETaElFACP1VhsCv9HVf9pXP5grl1
 // ==/UserScript==
 
 // ANCHOR - 初始化函数
@@ -59,11 +59,12 @@ function copyTitle(element, regex) {
   copyBtn.addEventListener("click", () => {
     GM_setClipboard(element.textContent.match(regex)[1], undefined, () => {
       if (GM_getValue("notification", true)) {
-        GM_notification({
-          title: "复制标题成功",
-          text: element.textContent.match(regex)[1],
-          tag: "copy-title-success",
-          timeout: 3000,
+        show_message({
+          message: `复制标题成功<br/>${element.textContent.match(regex)[1]}`,
+          type: "info",
+          position: "top-left",
+          opacity: 0.7,
+          autoClose: 2,
         });
       }
     });

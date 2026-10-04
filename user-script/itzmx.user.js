@@ -4,6 +4,7 @@
 // @version      1.2.2
 // @description  自动完成itzmx论坛的签到
 // @author       Emptylight
+// @homepage     https://github.com/emptylight370/release/blob/main/user-script
 // @homepageURL  https://github.com/emptylight370/release/blob/main/user-script
 // @source       https://github.com/emptylight370/release/blob/main/user-script/itzmx.user.js
 // @supportURL   https://github.com/emptylight370/release/issues

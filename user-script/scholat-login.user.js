@@ -4,6 +4,7 @@
 // @version      1.0.2
 // @description  Auto redirect to login page when open scholat website.
 // @author       Emptylight
+// @homepage     https://github.com/emptylight370/release/blob/main/user-script/scholat-login.user.js
 // @homepageURL  https://github.com/emptylight370/release/blob/main/user-script/scholat-login.user.js
 // @source       https://github.com/emptylight370/release/blob/main/user-script/scholat-login.user.js
 // @supportURL   https://github.com/emptylight370/release/issues

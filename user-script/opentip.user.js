@@ -6,6 +6,7 @@
 // @description        Auto login to OpenTip. Currently some feature is usable.
 // @description:zh-CN  自动登录到OpenTip。目前部分功能可用。
 // @author             Emptylight
+// @homepage           https://github.com/emptylight370/release/blob/main/user-script
 // @homepageURL        https://github.com/emptylight370/release/blob/main/user-script
 // @source             https://github.com/emptylight370/release/blob/main/user-script/opentip.user.js
 // @supportURL         https://github.com/emptylight370/release/issues

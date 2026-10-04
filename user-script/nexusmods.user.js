@@ -6,6 +6,7 @@
 // @description        Try to do something on nexusmods website.
 // @description:zh-CN  尝试在nexusmods网站上做一些事情。
 // @author             Emptylight
+// @homepage           https://github.com/emptylight370/release/blob/main/user-script
 // @homepageURL        https://github.com/emptylight370/release/blob/main/user-script
 // @source             https://github.com/emptylight370/release/blob/main/user-script/nexusmods.user.js
 // @supportURL         https://github.com/emptylight370/release/issues

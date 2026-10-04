@@ -6,6 +6,7 @@
 // @description        Auto redirect to SSO login page
 // @description:zh-CN  自动跳转到统一登录界面
 // @author             Emptylight
+// @homepage           https://github.com/emptylight370/release/blob/main/user-script/scnu-sso.user.js
 // @homepageURL        https://github.com/emptylight370/release/blob/main/user-script/scnu-sso.user.js
 // @source             https://github.com/emptylight370/release/blob/main/user-script/scnu-sso.user.js
 // @supportURL         https://github.com/emptylight370/release/issues

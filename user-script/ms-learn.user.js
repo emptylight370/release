@@ -4,6 +4,7 @@
 // @version      1.0.1
 // @description  打开Microsoft Learn自动从英文跳转到中文版本
 // @author       Emptylight
+// @homepage     https://github.com/emptylight370/release/blob/main/user-script
 // @homepageURL  https://github.com/emptylight370/release/blob/main/user-script
 // @source       https://github.com/emptylight370/release/blob/main/user-script/ms-learn.user.js
 // @supportURL   https://github.com/emptylight370/release/issues

@@ -4,6 +4,7 @@
 // @version      1.1.2
 // @description  重定向 i.gkd.li 到第三方快照审查器
 // @author       Emptylight
+// @homepage     https://github.com/emptylight370/release/blob/main/user-script
 // @homepageURL  https://github.com/emptylight370/release/blob/main/user-script
 // @source       https://github.com/emptylight370/release/blob/main/user-script/gkd-redirect.user.js
 // @supportURL   https://github.com/emptylight370/release/issues

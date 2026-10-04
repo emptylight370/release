@@ -6,6 +6,7 @@
 // @description        Add some actions to bangumi.
 // @description:zh-CN  为bangumi添加一些功能。
 // @author             Emptylight
+// @homepage           https://github.com/emptylight370/release/blob/main/user-script
 // @homepageURL        https://github.com/emptylight370/release/blob/main/user-script
 // @source             https://github.com/emptylight370/release/blob/main/user-script/bangumi_enhanced.user.js
 // @supportURL         https://github.com/emptylight370/release/issues

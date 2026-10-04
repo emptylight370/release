@@ -7,6 +7,7 @@
 // @description        Auto mute video after load page
 // @description:zh-CN  页面加载后自动静音视频
 // @author             Emptylight
+// @homepage           https://github.com/emptylight370/release/blob/main/user-script
 // @homepageURL        https://github.com/emptylight370/release/blob/main/user-script
 // @source             https://github.com/emptylight370/release/blob/main/user-script/ld246-mute.user.js
 // @supportURL         https://github.com/emptylight370/release/issues

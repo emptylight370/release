@@ -2,6 +2,7 @@
 
 > [!NOTE]
 > 以下脚本最初面向 Tampermonkey 开发，后续面向 ScriptCat 开发。各脚本最终支持 Tampermonkey 的版本见备注。在此版本后，可能使用到 ScriptCat 独占的功能，不保证兼容性。
+> 未标注脚本默认面向 ScriptCat 开发。
 
 ## scnu sso
 
@@ -72,3 +73,9 @@
 [Open on GitHub](ld246-mute.user.js)
 
 总有视频带有各种配乐，全都关了。同时添加了流云为作用域。
+
+## 蓝奏云增强
+
+[Open on GitHub](lanzou_enhanced.user.js)
+
+支持输入密码之后按 <kbd>ENTER</kbd> 确认。

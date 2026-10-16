@@ -36,9 +36,8 @@ body:
       label: 相关信息
       description: 请完善以下信息
       value: |
-        - 设备：
-        - 系统：
-        - 应用：
+        - 系统信息：
+        - 应用名称：
         - 版本：
     validations:
       required: true

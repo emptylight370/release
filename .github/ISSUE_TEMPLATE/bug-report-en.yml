@@ -36,9 +36,8 @@ body:
       label: Related information
       description: Please provide the following information
       value: |
-        - Device:
-        - System:
-        - Application:
+        - System Info:
+        - Application Name:
         - Version:
     validations:
       required: true

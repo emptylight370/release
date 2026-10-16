@@ -2,7 +2,7 @@
 // @name               Better Nexus Mods
 // @name:zh-CN         更好的Nexus Mods
 // @namespace          https://github.com/emptylight370/release/blob/main/user-script
-// @version            1.3.1
+// @version            1.3.2
 // @description        Try to do something on nexusmods website.
 // @description:zh-CN  尝试在nexusmods网站上做一些事情。
 // @author             Emptylight
@@ -12,7 +12,6 @@
 // @supportURL         https://github.com/emptylight370/release/issues
 // @match              https://www.nexusmods.com/*
 // @icon               http://nexusmods.com/favicon.ico
-// @grant              none
 // ==/UserScript==
 
 (function () {

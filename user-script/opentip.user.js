@@ -2,7 +2,7 @@
 // @name               OpenTip Login
 // @name:zh-CN         OpenTip登录
 // @namespace          https://github.com/emptylight370/release/blob/main/user-script
-// @version            1.1.1
+// @version            1.1.2
 // @description        Auto login to OpenTip. Currently some feature is usable.
 // @description:zh-CN  自动登录到OpenTip。目前部分功能可用。
 // @author             Emptylight
@@ -12,7 +12,6 @@
 // @supportURL         https://github.com/emptylight370/release/issues
 // @match              https://opentip.kaspersky.com/
 // @icon               https://opentip.kaspersky.com/favicon.ico
-// @grant              none
 // @run-at             document-end
 // ==/UserScript==
 

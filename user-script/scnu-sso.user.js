@@ -2,7 +2,7 @@
 // @name               SCNU SSO redirect
 // @name:zh-CN         SCNU统一认证登录跳转
 // @namespace          https://github.com/emptylight370/release/blob/main/user-script
-// @version            1.1.1
+// @version            1.1.2
 // @description        Auto redirect to SSO login page
 // @description:zh-CN  自动跳转到统一登录界面
 // @author             Emptylight
@@ -14,7 +14,6 @@
 // @match              https://jwxt.scnu.edu.cn/xtgl/login_slogin.html
 // @match              https://jwxt.scnu.edu.cn/xtgl/index_initMenu.html
 // @icon               https://sso.scnu.edu.cn/AccountService/static/fullscreen/images/scnulogo-icon.png
-// @grant              none
 // @run-at             document-start
 // ==/UserScript==
 
